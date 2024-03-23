@@ -1,8 +1,5 @@
 import { Request, Response } from 'express'
-
-import { z } from 'zod'
 import { makeUploadUseCase } from '../../use-case/factories/make-upload-use-case'
-import { IsCsvOrTxtFile } from '../../utils/isCsvOrTxtFile'
 
 export async function uploadUserFile(request: Request, response: Response) {
   const { file } = request

@@ -1,6 +1,6 @@
 import { Prisma } from '@prisma/client'
 import { UsersRepository } from '../upload-repository'
-import { prisma } from '../../lib/prisma'
+import { prisma } from '../../src/lib/prisma'
 
 export class PrismaUsersRepository implements UsersRepository {
   async searchMany(query: string) {
