@@ -1,9 +1,10 @@
 import { Request, Response, Router } from 'express'
 
 import multer from 'multer'
-import { uploadUserFile } from './src/http/controllers/uploadUserFile'
-import { searchUsers } from './src/http/controllers/searchUsers'
+
 import cors from 'cors'
+import { searchUsers } from './http/controllers/searchUsers'
+import { uploadUserFile } from './http/controllers/uploadUserFile'
 
 const multerConfig = multer()
 
