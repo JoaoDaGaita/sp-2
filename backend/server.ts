@@ -6,6 +6,11 @@ import cors from 'cors'
 const app = express()
 
 app.use(router)
-app.use(cors())
+app.use(
+  cors({
+    methods: 'POST',
+    origin: '*',
+  })
+)
 
 app.listen(3000, () => console.log('Server Running🚀'))

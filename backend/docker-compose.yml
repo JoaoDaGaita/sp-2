@@ -6,6 +6,6 @@ services:
     ports:
       - 5432:5432
     environment:
-      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_USERNAME=sp_b53u_user
       - POSTGRESQL_PASSWORD=docker
-      - POSTGRESQL_DATABASE=sp
+      - POSTGRESQL_DATABASE=sp_b53u

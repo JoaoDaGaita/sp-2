@@ -5,14 +5,8 @@ import { makeUploadUseCase } from '../../use-case/factories/make-upload-use-case
 import { IsCsvOrTxtFile } from '../../utils/isCsvOrTxtFile'
 
 export async function uploadUserFile(request: Request, response: Response) {
-  const fileSchema = z.object({
-    file: z
-      .any()
-      .refine((f: Express.Multer.File) => f.size < 5000000, 'Max size is 5MB'),
-  })
-
-  const { file } = fileSchema.parse(request)
-  //const { file } = request
+  const { file } = request
+  console.log(file)
 
   try {
     const uploadUseCase = makeUploadUseCase()
